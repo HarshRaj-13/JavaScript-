@@ -23,3 +23,46 @@ console.log(typeof "Harsh")
 console.log(typeof 12)
 console.log(typeof true)
 console.log("Type of null is :" + typeof null + "🔥")
+
+
+// JavaScript is a dynamically typed language, which means that data types of variables are determined by the value they hold at runtime and can change throughout the program as we assign different values to them.
+
+// Primitive : 7 types : String, Number, Boolearn, null, undefined, Symbol , bigint
+
+// Reference (Non primitive) : Array, Objects, Functions
+
+
+console.log("--------------------")
+
+const id = Symbol('123')
+const anotherId = Symbol('123')
+console.log(id === anotherId);
+
+const bigNum = 234324234234n // bigint
+console.log(typeof(bigNum))
+
+const arr = ["harsh" , 23 , "raj"]
+
+let obj = {
+        name: "harsh",
+        age: 22,
+}
+const func = function(){
+        console.log("Hello")
+}
+
+
+// Return type of variables in JavaScript
+// 1) Primitive Datatypes
+//        Number => number
+//        String  => string
+//        Boolean  => boolean
+//        null  => object
+//        undefined  =>  undefined
+//        Symbol  =>  symbol
+//        BigInt  =>  bigint
+
+// 2) Non-primitive Datatypes
+//        Arrays  =>  object
+//        Function  =>  function
+//        Object  =>  object
