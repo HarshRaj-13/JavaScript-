@@ -22,4 +22,3 @@ console.log(a);
 
 // Variables declared inside a { } block cannot be accessed from outside the block:
 
-// next to start with js 20 - 30
