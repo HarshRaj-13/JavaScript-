@@ -21,3 +21,5 @@ console.log(a);
 // These two keywords provide Block Scope in JavaScript.
 
 // Variables declared inside a { } block cannot be accessed from outside the block:
+
+// next to start with js 20 - 30
