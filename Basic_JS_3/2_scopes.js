@@ -5,8 +5,8 @@ var c = 300 // thats the problem b/c if you print then value of var c is still 3
 let a = 200 // Global scope
 if(true){
     let a = 1
-    const b = 2
-    var c = 3
+    const b = 3
+    var c = 4
     console.log(a);
 }
 // console.log(a); -->  The scope of a let variable is block scope. this line not print a if let a is not declared globally
