@@ -9,7 +9,8 @@ if(true){
     var c = 4
     console.log(a);
 }
-// console.log(a); -->  The scope of a let variable is block scope. this line not print a if let a is not declared globally
+// console.log(a); //-->  The scope of a let variable is block scope. this line not print a if let a is not declared globally , neglect let a = 200
+
 // console.log(b); -->  The scope of a const variable is block scope.
 console.log(c);
 console.log(a);
