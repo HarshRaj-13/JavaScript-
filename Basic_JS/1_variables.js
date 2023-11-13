@@ -12,7 +12,7 @@ accEmail = "harshrajssm13@gmail.com"
 accPassword = "54321"
 accCity = "Bengaluru"
 console.log(accId)
-
+console.log("connecting replit")
 
 console.table([accId,accEmail,accPassword,accCity])
 
