@@ -19,26 +19,38 @@
    </div>
 </body>
 <script>
+    // not used so much
     // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
     // }
-
-     // attachEvent()
-    // jQuery - on
-
-    // type, timestamp, defaultPrevented
-    // target, toElement, srcElement, currentTarget,
-    // clientX, clientY, screenX, screenY
-    // altkey, ctrlkey, shiftkey, keyCode
-
-    // document.getElementById('images').addEventListener('click', function(e){
-    //     console.log("clicked inside the ul");
-    // }, false)
-
+    
+    // Best approach using event listener
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
     //     e.stopPropagation()
-    // }, false)
+    // }, false) // third parameter false i.e event Propagation is by default false rhta hai aur isko likhne ka zaroorat bhi nhi padta.
+    
+     // attachEvent() // used in early times not used today
+    // jQuery - on // used previously not much used in today scenario.
+    
+     /* Types of event listener which is important or used extensively
+         type, timestamp, defaultPrevented
+         target, toElement, srcElement, currentTarget,
+         clientX, clientY, screenX, screenY  [ for interview purpose. ]
+         altkey, ctrlkey, shiftkey, keyCode  
+      */
+
+    // eventPropagation has 2 context -- 1. eventPublic(false) 2. eventCapturing 
+
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, false)
+     document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+        e.stopPropagation() // The stopPropagation() method of the Event interface prevents further propagation of the current 
+                            // event in the capturing and bubbling phases.
+    }, false) // Yaha par bubbling hoga. niche se upar (owl se ul) aur jab false ke true kr denge dono mein
+              // toh capturing hoga top se bottom yani ul se owl
     
     // document.getElementById('google').addEventListener('click',function(e){
     //     e.preventDefault();
@@ -48,16 +60,14 @@
    
     
     document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
+        console.log(e.target.tagName); // target helps to target particular element in a div.The target property returns the element where the event occured.
+                                       // tagName returns the tag name of the element on which it's called
         if (e.target.tagName === 'IMG') {
             console.log(e.target.id);
             let removeIt = e.target.parentNode
             removeIt.remove()
-        }
-    
-        
+        }     
     })
-    
     //removeIt.parentNode.removeChild(removeIt)
 </script>
 </html>
